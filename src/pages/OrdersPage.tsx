@@ -1,8 +1,12 @@
+import { PageContainer } from '../components/layout/PageContainer';
+
 export function OrdersPage() {
   return (
-    <div>
-      <h1>Orders</h1>
-      <p>Placeholder page for active QR pickup codes and order history.</p>
-    </div>
+    <PageContainer
+      title="Orders"
+      description="Track active orders and show your QR code at pickup."
+    >
+      <p>Wireframe content slot: Active QR pickup card & past orders list.</p>
+    </PageContainer>
   );
 }
