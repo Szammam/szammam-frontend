@@ -1,21 +1,10 @@
+@import './styles/tokens.css';
+
 :root {
-  /* Wireframe neutral tokens (to be replaced with Design System in Step 5) */
-  --color-bg: #f9fafb;
-  --color-surface: #ffffff;
-  --color-border: #e5e7eb;
-  --color-text-primary: #111827;
-  --color-text-secondary: #4b5563;
-  --color-accent: #1f2937;
-  --color-accent-subtle: #f3f4f6;
-
-  --header-height: 64px;
-  --mobile-nav-height: 60px;
-  --container-max-width: 1120px;
-  --radius-md: 8px;
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   background-color: var(--color-bg);
 }
@@ -30,6 +19,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
 }
 
 a {
@@ -49,12 +40,12 @@ a {
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 1.5rem 1rem calc(var(--mobile-nav-height) + 1.5rem);
+  padding: var(--space-6) var(--space-4) calc(var(--mobile-nav-height) + var(--space-6));
 }
 
 /* Desktop breakpoint (>= 768px) */
 @media (min-width: 768px) {
   .app-main {
-    padding: 2rem 1.5rem;
+    padding: var(--space-8) var(--space-6);
   }
 }

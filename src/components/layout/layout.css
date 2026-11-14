@@ -1,4 +1,4 @@
-/* Header */
+/* Header (30% Beige surface + 60% Green brand + 10% Purple CTA) */
 .app-header {
   position: sticky;
   top: 0;
@@ -12,16 +12,17 @@
   max-width: var(--container-max-width);
   height: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--space-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .app-header__brand {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand);
   letter-spacing: -0.02em;
 }
 
@@ -29,39 +30,48 @@
 .app-header__nav {
   display: none;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .app-header__link {
-  padding: 0.45rem 0.75rem;
+  padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   color: var(--color-text-secondary);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .app-header__link:hover {
-  background-color: var(--color-accent-subtle);
+  background-color: var(--color-surface-tint);
   color: var(--color-text-primary);
 }
 
+/* 10% Purple accent for active navigation tab */
 .app-header__link--active {
   background-color: var(--color-accent-subtle);
-  color: var(--color-text-primary);
-  font-weight: 600;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
 }
 
+/* 10% Purple accent CTA button */
 .app-header__auth-btn {
-  padding: 0.45rem 0.9rem;
-  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: 1px solid var(--color-accent);
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.15s ease;
 }
 
+.app-header__auth-btn:hover,
 .app-header__auth-btn--active {
-  background-color: var(--color-accent);
-  color: var(--color-surface);
-  border-color: var(--color-accent);
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
 }
 
 /* Mobile Bottom Nav (< 768px) */
@@ -82,68 +92,82 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   color: var(--color-text-secondary);
 }
 
 .mobile-nav__item--active {
-  color: var(--color-text-primary);
-  font-weight: 700;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
   background-color: var(--color-accent-subtle);
 }
 
-/* Footer (shown on desktop, hidden on mobile to avoid crowding bottom nav) */
+/* Footer (30% Beige surface) */
 .app-footer {
   display: none;
   border-top: 1px solid var(--color-border);
   background-color: var(--color-surface);
   color: var(--color-text-secondary);
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
 }
 
 .app-footer__inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: var(--space-4) var(--space-6);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Shared PageContainer */
+/* Shared PageContainer (30% Beige card sitting on 60% Green page background) */
 .page-container__header {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-strong);
 }
 
 .page-container__title {
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.25;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
 }
 
 .page-container__description {
-  margin: 0.25rem 0 0;
+  margin: var(--space-1) 0 0;
   color: var(--color-text-secondary);
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
 }
 
 .page-container__body {
   background-color: var(--color-surface);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
   min-height: 240px;
+}
+
+/* Inline link helper using 10% Purple accent */
+.text-link {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+}
+
+.text-link:hover {
+  color: var(--color-accent-hover);
 }
 
 /* Desktop Breakpoint (>= 768px) */
 @media (min-width: 768px) {
   .app-header__inner {
-    padding: 0 1.5rem;
+    padding: 0 var(--space-6);
   }
 
   .app-header__nav {
@@ -165,6 +189,6 @@
   }
 
   .page-container__title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-3xl);
   }
 }
