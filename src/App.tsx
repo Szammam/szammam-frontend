@@ -1,10 +1,8 @@
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+
 function App() {
-  return (
-    <main style={{ padding: '2rem' }}>
-      <h1>Szammam Frontend</h1>
-      <p>Vite + React + TypeScript scaffold ready.</p>
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
