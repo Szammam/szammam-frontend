@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Szammam Design System Tokens
+   Color Ratio: 60% Green (Dominant) / 30% Beige (Secondary) / 10% Purple (Accent)
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. Core Brand Palette
+     ------------------------------------------------------------------------ */
+  /* 60% Dominant: Green */
+  --palette-green-50: #f2f7f3;
+  --palette-green-100: #e1ede4;
+  --palette-green-200: #c3dcc9;
+  --palette-green-600: #2f6f44;
+  --palette-green-700: #245735;
+  --palette-green-900: #132e1c;
+
+  /* 30% Secondary: Warm Beige */
+  --palette-beige-50: #fbf8f3;
+  --palette-beige-100: #f5efe6;
+  --palette-beige-200: #e6dccb;
+  --palette-beige-300: #d5c7b2;
+  --palette-beige-800: #4a4238;
+
+  /* 10% Accent: Purple */
+  --palette-purple-100: #f1eafa;
+  --palette-purple-500: #7c3aed;
+  --palette-purple-600: #6d28d9;
+  --palette-purple-700: #5b21b6;
+
+  /* ------------------------------------------------------------------------
+     2. Semantic UI Tokens (Used by Components & Layouts)
+     ------------------------------------------------------------------------ */
+  /* Surfaces (60% Green canvas + 30% Beige containers) */
+  --color-bg: var(--palette-green-50);
+  --color-surface: var(--palette-beige-100);
+  --color-surface-elevated: var(--palette-beige-50);
+  --color-surface-tint: var(--palette-green-100);
+
+  /* Borders */
+  --color-border: var(--palette-beige-200);
+  --color-border-strong: var(--palette-beige-300);
+
+  /* Typography Colors */
+  --color-text-primary: var(--palette-green-900);
+  --color-text-secondary: var(--palette-beige-800);
+  --color-text-on-brand: #ffffff;
+  --color-text-on-accent: #ffffff;
+
+  /* Brand & 10% Accent Actions */
+  --color-brand: var(--palette-green-600);
+  --color-brand-hover: var(--palette-green-700);
+  --color-accent: var(--palette-purple-600);
+  --color-accent-hover: var(--palette-purple-700);
+  --color-accent-subtle: var(--palette-purple-100);
+
+  /* ------------------------------------------------------------------------
+     3. Typography Tokens
+     ------------------------------------------------------------------------ */
+  --font-family-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.75rem; /* 28px */
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+
+  /* ------------------------------------------------------------------------
+     4. Layout, Spacing & Radii Tokens
+     ------------------------------------------------------------------------ */
+  --header-height: 64px;
+  --mobile-nav-height: 60px;
+  --container-max-width: 1120px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}

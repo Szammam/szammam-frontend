@@ -9,7 +9,7 @@ export function NotFoundPage() {
     >
       <p>
         Return to{' '}
-        <Link to="/" style={{ textDecoration: 'underline' }}>
+        <Link to="/" className="text-link">
           Home
         </Link>
         .
