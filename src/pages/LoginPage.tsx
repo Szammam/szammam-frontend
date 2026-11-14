@@ -1,8 +1,12 @@
+import { PageContainer } from '../components/layout/PageContainer';
+
 export function LoginPage() {
   return (
-    <div>
-      <h1>Login</h1>
-      <p>Placeholder page for SMS authentication.</p>
-    </div>
+    <PageContainer
+      title="Log in"
+      description="Sign in with your phone number to place campus orders."
+    >
+      <p>Wireframe content slot: Phone number input & SMS code verification.</p>
+    </PageContainer>
   );
 }

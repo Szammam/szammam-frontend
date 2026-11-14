@@ -1,8 +1,12 @@
+import { PageContainer } from '../components/layout/PageContainer';
+
 export function HomePage() {
   return (
-    <div>
-      <h1>Home / Menu</h1>
-      <p>Placeholder page for browsing daily campus food offers.</p>
-    </div>
+    <PageContainer
+      title="Home / Menu"
+      description="Browse today's available campus meals and quick picks."
+    >
+      <p>Wireframe content slot: Featured meals & category filters.</p>
+    </PageContainer>
   );
 }

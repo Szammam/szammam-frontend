@@ -1,8 +1,9 @@
+import { PageContainer } from '../components/layout/PageContainer';
+
 export function CartPage() {
   return (
-    <div>
-      <h1>Cart</h1>
-      <p>Placeholder page for reviewing selected items and checkout.</p>
-    </div>
+    <PageContainer title="Cart" description="Review your selected items before checkout.">
+      <p>Wireframe content slot: Line items, pickup time selector, and summary.</p>
+    </PageContainer>
   );
 }

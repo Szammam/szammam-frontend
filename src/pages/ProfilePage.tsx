@@ -1,8 +1,9 @@
+import { PageContainer } from '../components/layout/PageContainer';
+
 export function ProfilePage() {
   return (
-    <div>
-      <h1>Profile</h1>
-      <p>Placeholder page for student account and preferences.</p>
-    </div>
+    <PageContainer title="Profile" description="Manage your student account and saved preferences.">
+      <p>Wireframe content slot: Student profile info & payment preferences.</p>
+    </PageContainer>
   );
 }
